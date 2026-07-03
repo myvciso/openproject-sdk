@@ -1,11 +1,13 @@
-# openproject-sdk
+# @myvciso/openproject-sdk
 
 Node.js SDK for the [OpenProject API v3](https://www.openproject.org/docs/api/introduction/).
+
+Community-maintained SDK for OpenProject. Not affiliated with or endorsed by the OpenProject project or its maintainers.
 
 ## Installation for this project
 
 ```bash
-npm install openproject-sdk
+npm install @myvciso/openproject-sdk
 ```
 
 Requires Node.js 18+ (uses native `fetch`).
@@ -15,7 +17,7 @@ Requires Node.js 18+ (uses native `fetch`).
 Generate an API key in OpenProject under **My account → Access tokens**.
 
 ```typescript
-import { OpenProjectClient } from "openproject-sdk";
+import { OpenProjectClient } from "@myvciso/openproject-sdk";
 
 const client = new OpenProjectClient({
   baseUrl: "https://openproject.example.com",
@@ -87,7 +89,7 @@ await client.post("/api/v3/versions", { name: "v1.0", _links: { definingProject:
 Failed API responses throw `OpenProjectError` with `status`, `message`, and the parsed error body:
 
 ```typescript
-import { OpenProjectError } from "openproject-sdk";
+import { OpenProjectError } from "@myvciso/openproject-sdk";
 
 try {
   await client.workPackages.get(999);
