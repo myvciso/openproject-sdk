@@ -2,7 +2,7 @@
 
 Node.js SDK for the [OpenProject API v3](https://www.openproject.org/docs/api/introduction/).
 
-## Installation
+## Installation for this project
 
 ```bash
 npm install openproject-sdk
